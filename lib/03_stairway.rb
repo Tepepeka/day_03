@@ -4,19 +4,19 @@ end
 
 def move(number)
     if number >= 5
-        puts "u go up!"
+        #puts "u go up!"
         return 1
     elsif number == 1
-        puts "u go down!"
+        #puts "u go down!"
         return -1
     else
-        puts "no move!"
+        #puts "no move!"
         return 0
     end
 end
 
 def show_state(floor)
-    puts "u are @#{floor}th floor"
+    #puts "u are @#{floor}th floor"
 end
 
 def is_win?(floor)
@@ -28,7 +28,7 @@ def is_win?(floor)
 end
 
 def play()
-    puts "Welcome"
+    #puts "Welcome"
     floor = 0
     show_state(floor)
     loop_number = 0
@@ -48,19 +48,19 @@ def play()
         loop_number += 1
     end
 
-    puts "YOU WIN"
+    #puts "YOU WIN"
     return loop_number
 end
 
 def average()
     total_loop = 0
     10.times do |i|
-        puts "Game n°#{i+1}"
         score = play()
         total_loop += score
+        puts "Game n°#{i+1} :#{score}loops"
     end
     average = total_loop / 10.0
-    return puts "average finish time is:#{average} loops"
+    return puts "average finish time is :#{average}loops"
 end
 
 def perform()
